@@ -18,7 +18,7 @@ type DayProps = {
 }
 
 export const Day:FC<PropsWithChildren<DayProps>> = (props) => {
-  const { transform, gridNum = 0, startY = 0, panelColors = {}, initStartDate, space = 2, value = [], rectSize = 11, endDate, rectProps, rectRender } = props;
+  const { transform, gridNum = 0, startY = 0, panelColors = {}, initStartDate, space = 2, value = [], rectSize = 15, endDate, rectProps, rectRender } = props;
   const data = useMemo(() => formatData(value), [value]);
   const nums = useMemo(() => numberSort(Object.keys(panelColors).map((item) => parseInt(item, 10))), [panelColors]);
   return (
